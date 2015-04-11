@@ -1,0 +1,929 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.2"/>
+
+
+    <meta name="description" content="vianull's blog | casperjs | hexo" />
+
+
+
+	<meta name="keywords" content="nodejs," />
+
+  <title> （转）nodejs的2014 // viaNull | why not </title>
+</head>
+
+<body>
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">viaNull | why not</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+
+  <ul id="menu" class="menu">
+     
+    
+      
+      <li class="menu-item menu-item-home">
+        <a href="/">
+          <i class="menu-item-icon icon-home"></i> <br />
+          首页
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-categories">
+        <a href="/categories">
+          <i class="menu-item-icon icon-categories"></i> <br />
+          分类
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-archives">
+        <a href="/archives">
+          <i class="menu-item-icon icon-archives"></i> <br />
+          归档
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-tags">
+        <a href="/tags">
+          <i class="menu-item-icon icon-tags"></i> <br />
+          标签
+        </a>
+      </li>
+    
+  </ul>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              （转）nodejs的2014
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2014-12-22
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/nodejs学习系列/">nodejs学习系列</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2014/12/22/2014-of-nodejs-md/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/22/2014-of-nodejs-md/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <h2 id="写在前面">写在前面</h2><p>从学习libevent libuv,了解到了node,从此对其爱不释手。有段时间一天到晚在看别人各种包和各种源码，不过自己也没写出来什么正经的项目哈。转载这篇文章做个纪念，2015对node的学习计划</p>
+<ul>
+<li>MEAN</li>
+<li>KOA框架</li>
+<li>期待基于原生的Generator, Promise方案</li>
+</ul>
+<a id="more"></a>
+<h2 id="Year_2014_of_Node-js">Year 2014 of Node.js</h2><p>Node.js 的 2014 年充满了不幸和争议. 这一年 Noder 们经历了太多的伤心事, 经历了漫长的等待, 经历了沉重的分裂之痛. 也许 Noder 们不想回忆14年 Node.js land 发生的事情, 但正因为痛才更有铭记的价值.</p>
+<h2 id="2013-12-04_Ben_离开_Node_项目"><a href="http://blog.nodejs.org/2013/12/03/bnoordhuis-departure/" target="_blank" rel="external">2013.12.04 Ben 离开 Node 项目</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/highres_167133972.jpeg" alt=""></p>
+<p>自从 Node 鼻祖 RY 退出项目的开发, 管理之后, <a href="https://github.com/bnoordhuis" target="_blank" rel="external">Ben Noordhuis</a> 在两年多的时间里一直不断为 node 项目提交代码, 解决问题, 提升速度. 成为了 Node 和 libuv 两个项目的最大代码贡献者.  但却因为一件意想不到的人称代词风波, Ben 不得不离开 Node 世界. 这个事件犹如一枚核弹一样在 Node 圈中激起了轩然大波, 有人惋惜 Ben 的离开, 有人指责 Ben 对女程序员不尊重. 诚然这次事件折射出男女问题在程序员世界的敏感性. 但背后却是 Node 这个炙手可热项目控制权的争夺.</p>
+<h2 id="01-15_Isaacs_交接_Node_掌门人身份"><a href="http://blog.nodejs.org/2014/01/15/the-next-phase-of-node-js/" target="_blank" rel="external">01.15 Isaacs 交接 Node 掌门人身份</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/e9cdbd81gw1en3t8fwdi0j20dv0ezdgk.jpg" alt=""></p>
+<p>Isaacs 是 RY 之后 Node 的第二任掌门, 同时也是包管理工具 NPM 的作者. 在这段时间里 Isaacs 的工作重心是 Node 的开发和维护, NPM 则由 Nodejitsu 运营. Node 因其众多的优秀特点, 得到众多开发者和公司的采用和支持, 期间 NPM 的包数量和下载量也呈现了爆发性的增长, 甚至导致包安装速度巨慢, 服务多次宕机, 因此 Nodejitsu 举办了 <a href="https://scalenpm.nodejitsu.com/" target="_blank" rel="external">scalenpm</a> 活动筹集 NPM 扩容和维护资金, 并在很短时间内达成 30W$目标. </p>
+<p>Isaacs 看到了 NPM 未来的发展空间和机会, 因此将项目掌门人身份移交给<a href="https://github.com/tjfontaine" target="_blank" rel="external">TJ Fontaine</a>, 并把 NPM 的运营权从 Nodejitsu 收回, 成立了 npm, Inc 公司, 并获得了几百万的启动资金. 专注 NPM 服务的运行, 维护, 开发工作, 并进行商业化探索. 这之后 Nodejitsu, strongloop, cnpm等相继搭建了自己的 NPM registry服务.</p>
+<h2 id="03-03_Node-js_arrives_for_the_JVM"><a href="http://www.infoworld.com/article/2610123/javascript/node-js-arrives-for-the-jvm.html" target="_blank" rel="external">03.03 Node.js arrives for the JVM</a></h2><p>14年有一个说法: JavaScript everywhere, and everything ported to JavaScript. </p>
+<p><a href="http://nodyn.io/" target="_blank" rel="external">Nodyn</a> 是让这种说法得以信服的项目之一. 它可以让 Node.js APP 在 JVM 之上运行的项目. 并且在 Oracle 举办的 Java 2014 大会上, 有一个专门的议题是讨论 <a href="http://www.javaworld.com/article/2599994/html-css-js/html-css-js-the-star-of-javaone-is-javascript.html" target="_blank" rel="external">JS</a> 的</p>
+<h2 id="04-05_Microsoft_Publishes_Node-js_Tools_for_Visual_Studio"><a href="http://visualstudiomagazine.com/articles/2014/04/05/node-js-tools-for-visual-studio.aspx" target="_blank" rel="external">04.05 Microsoft Publishes Node.js Tools for Visual Studio</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/Apps_Visual_Studio_Metro_icon.png" alt=""></p>
+<p>Node 项目最初只能在 linux 和 osx 平台运行, 但随着项目越来越多的被使用, RY 对 windows 平台的重视, 后来 Node 终于来到了 win 的世界, 实现了三大平台兼容. 微软对 Node 也非常重视, 并有全职员工进行 win 版 node 的开发, 支持, 维护. 之后在其云平台 Azure 中添加 Node 环境支持. 同时还进行了 Node.js Tools for Visual Studio 开发, 在四月份实现了Beta, <a href="http://www.drdobbs.com/tools/building-nodejs-projects-in-visual-studi/240169356" target="_blank" rel="external">12月份实现了RC</a>. NTVS 将众多 VS 优秀特点(语法提示, 包管理, 断点调试)带到了 node 的(win)开发世界中.</p>
+<p>说道开发工具: Webstorm 和 Sublime 也是 Node 开发的两个利器.</p>
+<h2 id="05-27_NodeSource_加入_Node_创业公司行列"><a href="http://venturebeat.com/2014/05/27/a-new-node-js-company-nodesource-opens-its-virtual-doors/" target="_blank" rel="external">05.27 NodeSource 加入 Node 创业公司行列</a></h2><center><img src="http://blog.rednode.cn/content/images/2014/Dec/logo_496d3f.svg" alt=""></center> 
+
+<p>随着 Node 的发展, <a href="http://readwrite.com/2013/12/06/nodejs-os-infrastructure" target="_blank" rel="external">越来越多的开发者, 公司开始使用 Node</a>, 并涌现了许多 Node 方向的创业公司. <a href="https://nodesource.com/" target="_blank" rel="external">Nodesource</a> 是一家以 Node.js 为切入点的软件创业公司, 提供企业级的产品, 服务, 培训, 咨询等. 除此之外还有许多专注于 Node 的创业公司:</p>
+<ul>
+<li>Strongloop</li>
+<li>Nodejitsu</li>
+<li>modulus</li>
+<li><a href="http://risingstack.com/" target="_blank" rel="external">risingstack</a></li>
+<li><a href="http://www.nearform.com/" target="_blank" rel="external">nearform</a></li>
+<li>npm, Inc</li>
+<li><a href="http://www.yld.io/" target="_blank" rel="external">yld</a></li>
+<li><a href="http://nodefirm.com/" target="_blank" rel="external">nodefirm</a></li>
+<li><a href="http://www.nodecompany.com/" target="_blank" rel="external">nodecompany</a></li>
+<li><a href="http://nodeprogram.com/" target="_blank" rel="external">nodeprogram</a></li>
+</ul>
+<h2 id="06-11_Node-js_授权协议调整"><a href="http://www.infoworld.com/article/2608006/javascript/joyent-makes-it-easier-to-contribute-code-to-node-js.html" target="_blank" rel="external">06.11 Node.js 授权协议调整</a></h2><p>TJ Fontaine 接管 Node 之后, 对项目未来的发展有<a href="http://blog.nodejs.org/2014/01/16/nodejs-road-ahead/" target="_blank" rel="external">自己很好的规划</a>, 想要从<a href="http://blog.nodejs.org/2014/07/29/building-nodejs-together/" target="_blank" rel="external">网站, 文档, add-on抽象层</a>等方向着手推动项目发展, 并在全球各大城市举办 <a href="http://www.joyent.com/noderoad" target="_blank" rel="external">Node.js on the road</a> 活动以分享, 交流, 收集 node 的使用心得, 问题. 后又决定修改 Node 的贡献授权协议, 希望大大简化代码贡献流程, 促进项目活跃发展. 但此举并未提高开发者对项目的代码贡献激情和速度. 反而因为各地举办交流活动, 及其他原因使得早已开发完成, 大家翘首等待的 0.12 迟迟不能发布. 后又因为 node fork 事件忙于筹办咨询委员会事宜无暇顾及代码开发, 至今(12.19)都没发布0.12 . 在这一年的时间中 TJF 唯一一件值得肯定的事情可能就是项目官方网站的全新改版吧.</p>
+<p>注: Node 版本的发布规则为偶数为稳定版, 奇数为开发版, 0.12 本应该在 0.10 发布的一年后(2014年初)发布, 按照规划 0.12 是 1.0 发布前最后一个版本, 并添加了多个特性. 0.12代码开发工作其实在2013年底已经完成</p>
+<h2 id="07-03_TJ_宣布离开_Node_转投_Go"><a href="https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b" target="_blank" rel="external">07.03 TJ 宣布离开 Node 转投 Go</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/pmjIzszyqpfVmcx_lOGMCw_article.jpg" alt=""></p>
+<p>如果你不知道 <a href="https://github.com/tj" target="_blank" rel="external">TJ</a> 是谁, 那你肯定不是 Noder, 也算不上资深 JS 开发者. <a href="https://medium.com/@tjholowaychuk" target="_blank" rel="external">TJ</a> 是 Node 界 NO1 的大神级人物: 90 后, 高产且高质量开发者, 众多 Node 知名模块作者(Express, ejs, commander, connect, mocha, co, koa, git-extras), 其随便一个项目在 github 上 star 数量成百上千,github follower数量上万,且排名在前十(前十中有三位为github创始人, 还有linux的作者),其一天可以完成普通人一周的工作,并且在twitter和github上回复各种问题.以至于让人认为他不是一个真实的人,而是一个包含多个开发者的组织. 很少参加开发者大会, 几乎不看编程书籍,而是通过直接看代码学习. 除 Node 之外 TJ 还是许多其他语言(C,java,go…)的高手. 除此之外他喜欢杀马特风格, 是一个<a href="http://www.tjholowaychuk.com/" target="_blank" rel="external">摄影爱好者</a></p>
+<p>可是 TJ 大神选择离开 Node, 而投入 Go 的世界. 因为 Node 一些语言的缺点: 异步代码维护困难, 不适合大型项目, 异常处理很弱, 因为 node 版本发布很慢, 因为他现在开发的东西使用Go更合适, 因为他在node的世界里已经很巅峰,想要尝试新的东西. </p>
+<p>TJ 将他大部分的项目都交给了其他人维护, 其中 Express 被有偿转给了 Strongloop (项目移交后Express的其他主要开发者则致力于http基础库的开发<a href="https://github.com/jshttp" target="_blank" rel="external">jshttp</a>).  目前只在维护koa, 一个在0.12之后将会大放异彩的项目.</p>
+<p>TJ生活在加拿大, 目前就职于 segment.com</p>
+<h2 id="10-23_Node-js_咨询委员会成立"><a href="https://www.joyent.com/blog/node-js-advisory-board" target="_blank" rel="external">10.23 Node.js 咨询委员会成立</a></h2><p>自从 Ben 事件之后, 一直有声音建议将 Node 项目移交给开源软件组织, 以一种更加开放的方式管理. 后来因为0.12的一拖再拖, 及其他问题, 导致众多开发者对 Joyent 不满, 于是项目的几个 top 开发者成立了<a href="http://nodeforward.org/" target="_blank" rel="external">node-forward</a>, 并 fork 了项目, 希望能加快项目开发.</p>
+<p>为了应对这次危机, Joyent 效仿 Docker 的管理方式, 成立了<a href="http://nodejs.org/about/advisory-board/" target="_blank" rel="external">advisory board</a>, 想要以一种更加开放的方式管理项目, 初始成员包含<a href="http://nodejs.org/about/advisory-board/members/" target="_blank" rel="external">多个公司node开发者</a>, 并进行了<a href="http://nodejs.org/advisory-board/" target="_blank" rel="external">多次会议</a> 讨论成员选取方式, 代码贡献发布, 新特性支持等众多问题.</p>
+<p>咨询委员会的成立, 使得 Node 的管理更加规范, 但势必会减慢项目的发布进度(初期各种事情需要确定, 新特性必须经过多方商讨确定等)</p>
+<h2 id="11-21_libuv_1-0_release"><a href="https://github.com/libuv/libuv/releases/tag/v1.0.0" target="_blank" rel="external">11.21 libuv 1.0 release</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/banner.png" alt=""><br><a href="https://github.com/libuv/libuv" target="_blank" rel="external">libuv</a> 是 Node.js 的底层支撑项目, 提供了系统异步IO支持, 并且兼容三大平台. 原来只是用于 Node 项目, 现在从 Joyent 公司独立出来, 并应用到许多其他项目 Luvit, Julia, pyuv. 目前该项目已经发布 1.0 . 其主要开发者为 StrongLoop 公司的 Ben 和 Bert. 以及<a href="https://github.com/saghul" target="_blank" rel="external">saghul</a></p>
+<h2 id="12-09_io-js_fork"><a href="http://www.infoq.com/news/2014/12/iojs" target="_blank" rel="external">12.09 io.js fork</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/iojs.png" alt=""></p>
+<p>Node.js 跟 Docker 真像一对同命兄弟, 发布后都迅速的火起来, 都采用相似的委员会管理模式, 最后又都分裂为两个分支: Docker 分裂出了 Rocket, Node <a href="https://gigaom.com/2014/12/05/fork-in-the-road-for-node-js/" target="_blank" rel="external">分离出了 io.js</a> </p>
+<p><a href="https://github.com/iojs/io.js" target="_blank" rel="external">io.js</a> 其实 是nodeforward 重命名, 因为法律版权问题,他们无法使用 node 这个名字, 故而改用 io.js 这个通用名词. io.js 由 node 项目top8代码贡献者中的六人fork出来, io.js定义为与node和npm兼容的框架, 通过几次视频会议确定了他们的方向和目标:</p>
+<ul>
+<li>Continuous integration</li>
+<li>100% passing tests as a normal state of affairs</li>
+<li>Strict SemVer-compliant versioning</li>
+<li>Contributor ownership, outside of corporate control</li>
+<li>Transparent consensus-seeking governance</li>
+<li>Weekly releases</li>
+<li>Supported versions of V8</li>
+<li>Active development</li>
+<li>Predictable roadmap</li>
+<li>Community engagement</li>
+</ul>
+<p>目前正忙于着手开发新版本, 打算在2015.1.13 发布 1.0 alpha 版. 另外值得一提的是, Ben 目前成为io.js的主力开发者, 以另外一种方式又回到了node的怀抱.</p>
+<p>关于io.js, advisory board, node-forward的关系可以参看Isaacs<a href="http://blog.izs.me/post/104685388058/io-js" target="_blank" rel="external">的一篇博客</a>, 其中提到io.js跟node并非竞争关系,并且希望将来某个时候能够合回node.</p>
+<p>分裂在开源的世界中似乎是无法避免的问题. 竞争带来分裂的同时, 也为整个生态带来生机. </p>
+<h2 id="12-10_npmjs-com_改版"><a href="http://blog.npmjs.org/post/104856015780/npm-has-a-new-website" target="_blank" rel="external">12.10 npmjs.com 改版</a></h2><p><img src="http://blog.rednode.cn/content/images/2014/Dec/Screen_Shot_2014_12_19_at_12_21_51_AM.png" alt=""></p>
+<p>似乎这一年来唯一的好消息就是 NPM 了. npm,Inc 成立后, Isaacs通过架构重新设计和优化, 大大增加了服务的稳定性, 及响应速度(详见<a href="http://blog.npmjs.org/" target="_blank" rel="external">官方博客</a>). NPM 在 <a href="http://blog.rednode.cn/finally-npm-become-the-largest-module-system/" target="_blank" rel="external">06.27 超过 ruby 和 java 成为最大的包管理平台</a>, 并在<a href="https://github.com/npm/npm/releases/tag/v2.0.0" target="_blank" rel="external">09.13发布了2.0版</a>, 引入了包括<a href="http://www.infoworld.com/article/2686954/node-js/npm-enterprises-nodejs-module-management.html" target="_blank" rel="external">私有模块在内的众多特性</a>, 10.14成为第一个数量<a href="http://blog.modulus.io/growth-of-npm-infographic" target="_blank" rel="external">超过十万的包平台</a>. npm 还重新设计了<a href="https://docs.npmjs.com/" target="_blank" rel="external">文档页面</a>, 及首页. 并把域名从 .org 迁移到了 .com (盈利的化的前奏?)</p>
+<p>除此之外他们还重新定义了 NPM. NPM不再只是node的包管理工具, 还是 browser, jquery, gulp, bower, mobile, angular, nodebots, grunt, tessel, browserify — javascript 的管理工具. NPM 不再是 node package manage 的缩写, 而是: nice people matter, nominally patriotric meathead, neoanthropic preternatural murmurings 等有趣单词的缩写(可能是 io.js 的出现才让他们想要强调这点, 也可能是他们想做更多,而不只是 node 平台)</p>
+<h1 id="2015">2015</h1><p>14 年 Noder 们把最坏的事情都经历了, 未来只会更好, 不会更差. 随着 node 0.12 和 io.js 1.0 的马上发布, 我们不仅能用上新版本的众多特性, 还能使用 ES6 中的许多语法: Generator, Promise等, 届时 koa 等框架将会得到大量采用. 15 年 node 会走出迷茫, 向着美好的未来前进.</p>
+<center><span style="font-size:80px;color:#8cc84b">We are Noder</span></center>
+
+<p>转自： <a href="http://blog.rednode.cn/year-2014-of-node-js/" target="_blank" rel="external">http://blog.rednode.cn/year-2014-of-node-js/</a></p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nodejs/"> #nodejs </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/12/30/rails-notes/">rails-notes</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/12/19/rails-note/">rails使用问题记录</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+      <div class="comments" id="comments">
+        
+          <div class="ds-thread" data-thread-key="2014/12/22/2014-of-nodejs-md/"
+               data-title="（转）nodejs的2014" data-url="http://blog.vianull.com/2014/12/22/2014-of-nodejs-md/">
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="http://vianull-hexo.qiniudn.com/avatar.jpg" alt="vianull" />
+          <p class="site-author-name">vianull</p>
+        </div>
+        <p class="site-description motion-element">vianull's blog | casperjs | hexo</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Year_2014_of_Node-js"><span class="nav-number">2.</span> <span class="nav-text">Year 2014 of Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2013-12-04_Ben_离开_Node_项目"><span class="nav-number">3.</span> <span class="nav-text">2013.12.04 Ben 离开 Node 项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#01-15_Isaacs_交接_Node_掌门人身份"><span class="nav-number">4.</span> <span class="nav-text">01.15 Isaacs 交接 Node 掌门人身份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-03_Node-js_arrives_for_the_JVM"><span class="nav-number">5.</span> <span class="nav-text">03.03 Node.js arrives for the JVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#04-05_Microsoft_Publishes_Node-js_Tools_for_Visual_Studio"><span class="nav-number">6.</span> <span class="nav-text">04.05 Microsoft Publishes Node.js Tools for Visual Studio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#05-27_NodeSource_加入_Node_创业公司行列"><span class="nav-number">7.</span> <span class="nav-text">05.27 NodeSource 加入 Node 创业公司行列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#06-11_Node-js_授权协议调整"><span class="nav-number">8.</span> <span class="nav-text">06.11 Node.js 授权协议调整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#07-03_TJ_宣布离开_Node_转投_Go"><span class="nav-number">9.</span> <span class="nav-text">07.03 TJ 宣布离开 Node 转投 Go</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-23_Node-js_咨询委员会成立"><span class="nav-number">10.</span> <span class="nav-text">10.23 Node.js 咨询委员会成立</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-21_libuv_1-0_release"><span class="nav-number">11.</span> <span class="nav-text">11.21 libuv 1.0 release</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-09_io-js_fork"><span class="nav-number">12.</span> <span class="nav-text">12.09 io.js fork</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-10_npmjs-com_改版"><span class="nav-number">13.</span> <span class="nav-text">12.10 npmjs.com 改版</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2015"><span class="nav-number"></span> <span class="nav-text">2015</span></a></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2011 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">vianull</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.content img').each(function () {
+        var $image = $(this);
+        var $imageWrapLink = $image.parent('a');
+
+        if ($imageWrapLink.size() < 1) {
+          $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
+        }
+        $imageWrapLink.addClass('fancybox');
+      });
+    });
+    $('.fancybox').fancybox({
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+  function hasMobileUA () {
+    var nav = window.navigator;
+    var ua = nav.userAgent;
+    var pa = /iPad|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g;
+
+    return pa.test(ua);
+  }
+
+  function isDesktop () {
+    return screen.width > 991 && !hasMobileUA();
+  }
+
+  function isTablet () {
+    return screen.width < 992 && screen.width > 767 && hasMobileUA();
+  }
+
+  function isMobile () {
+    return screen.width < 767 && hasMobileUA();
+  }
+
+  function escapeSelector (selector) {
+    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
+  }
+</script>
+
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" id="motion.global">
+  $(document).ready(function () {
+    var body = $('body');
+    var isSidebarVisible = false;
+    var sidebarToggle = $('.sidebar-toggle');
+    var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
+    var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
+    var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
+    var sidebar = $('.sidebar');
+
+    var SIDEBAR_WIDTH = '320px';
+    var SIDEBAR_DISPLAY_DURATION = 300;
+
+    var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
+
+    var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
+    var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
+
+    var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine2ndStatusArrow = {width: '90%'};
+    var sidebarToogleLine2ndStatusClose = {opacity: 0};
+
+    var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
+    var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
+
+    LogoAndMenuMotion();
+    sidebatToggleMotion();
+    postsListMotion();
+    backToTopMotion();
+
+
+    $(document)
+      .on('sidebar.isShowing', function () {
+        isDesktop() && body.velocity(
+          {paddingRight: SIDEBAR_WIDTH},
+          SIDEBAR_DISPLAY_DURATION
+        );
+        sidebarContentMotion();
+      })
+      .on('sidebar.isHiding', function () {});
+
+    function LogoAndMenuMotion() {
+      $.Velocity.RunSequence([
+        { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
+        { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
+        
+        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
+        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } },
+        
+        { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
+      ]);
+      $('.menu-item').velocity('transition.slideDownIn', {display: null});
+    }
+
+
+    function backToTopMotion () {
+      var b2top = $('.back-to-top');
+      b2top.on('click', function () {
+        body.velocity('scroll');
+      });
+    }
+
+    function sidebarShowMotion () {
+
+      sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
+      sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
+      sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
+
+      sidebar.velocity({width: SIDEBAR_WIDTH}, {
+        display: 'block',
+        duration: SIDEBAR_DISPLAY_DURATION,
+        complete: function () {
+          sidebar.addClass('sidebar-active');
+          sidebar.trigger('sidebar.didShow');
+        }
+      });
+      sidebar.trigger('sidebar.isShowing');
+    }
+
+    function sidebarHideMotion () {
+      isDesktop() && body.velocity({paddingRight: 0});
+      sidebar.velocity('reverse');
+
+      sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
+      sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
+      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+
+      sidebar.removeClass('sidebar-active');
+      sidebar.trigger('sidebar.isHiding');
+    };
+
+    function sidebarContentMotion () {
+      $('.sidebar .motion-element').velocity(
+        'transition.slideRightIn',
+        {stagger: 50, drag: true}
+      );
+    }
+
+    function postsListMotion () {
+      var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
+      $('.post').velocity('transition.slideDownIn', postMotionOptions);
+    }
+
+    function sidebatToggleMotion () {
+      sidebarToggle.on('click', function () {
+        isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
+        isSidebarVisible = !isSidebarVisible;
+      });
+
+      sidebarToggle.hover(function () {
+        if (isSidebarVisible) {return}
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
+      }, function () {
+        if (isSidebarVisible) {return}
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
+      });
+    }
+  });
+
+</script>
+
+
+
+
+
+  
+  
+<script type="text/javascript" id="bootstrap.scrollspy.custom">
+  /* ========================================================================
+  * Bootstrap: scrollspy.js v3.3.2
+  * http://getbootstrap.com/javascript/#scrollspy
+  * ========================================================================
+  * Copyright 2011-2015 Twitter, Inc.
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * ======================================================================== */
+
+  /**
+   * Custom by iissnan
+   *
+   * - Add a `clear.bs.scrollspy` event.
+   * - Esacpe targets selector.
+   */
+
+
+  +function ($) {
+    'use strict';
+
+    // SCROLLSPY CLASS DEFINITION
+    // ==========================
+
+    function ScrollSpy(element, options) {
+      this.$body          = $(document.body)
+      this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
+      this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
+      this.selector       = (this.options.target || '') + ' .nav li > a'
+      this.offsets        = []
+      this.targets        = []
+      this.activeTarget   = null
+      this.scrollHeight   = 0
+
+      this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
+      this.refresh()
+      this.process()
+    }
+
+    ScrollSpy.VERSION  = '3.3.2'
+
+    ScrollSpy.DEFAULTS = {
+      offset: 10
+    }
+
+    ScrollSpy.prototype.getScrollHeight = function () {
+      return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+    }
+
+    ScrollSpy.prototype.refresh = function () {
+      var that          = this
+      var offsetMethod  = 'offset'
+      var offsetBase    = 0
+
+      this.offsets      = []
+      this.targets      = []
+      this.scrollHeight = this.getScrollHeight()
+
+      if (!$.isWindow(this.$scrollElement[0])) {
+        offsetMethod = 'position'
+        offsetBase   = this.$scrollElement.scrollTop()
+      }
+
+      this.$body
+        .find(this.selector)
+        .map(function () {
+          var $el   = $(this)
+          var href  = $el.data('target') || $el.attr('href')
+          var $href = /^#./.test(href) && $(escapeSelector(href)) // Need to escape selector.
+
+          return ($href
+            && $href.length
+            && $href.is(':visible')
+            && [[$href[offsetMethod]().top + offsetBase, href]]) || null
+        })
+        .sort(function (a, b) { return a[0] - b[0] })
+        .each(function () {
+          that.offsets.push(this[0])
+          that.targets.push(this[1])
+        })
+
+
+    }
+
+    ScrollSpy.prototype.process = function () {
+      var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+      var scrollHeight = this.getScrollHeight()
+      var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
+      var offsets      = this.offsets
+      var targets      = this.targets
+      var activeTarget = this.activeTarget
+      var i
+
+      if (this.scrollHeight != scrollHeight) {
+        this.refresh()
+      }
+
+      if (scrollTop >= maxScroll) {
+        return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+      }
+
+      if (activeTarget && scrollTop < offsets[0]) {
+        $(this.selector).trigger('clear.bs.scrollspy')  // Add a custom event.
+        this.activeTarget = null
+        return this.clear()
+      }
+
+      for (i = offsets.length; i--;) {
+        activeTarget != targets[i]
+          && scrollTop >= offsets[i]
+          && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
+          && this.activate(targets[i])
+      }
+    }
+
+    ScrollSpy.prototype.activate = function (target) {
+      this.activeTarget = target
+
+      this.clear()
+
+      var selector = this.selector +
+        '[data-target="' + target + '"],' +
+        this.selector + '[href="' + target + '"]'
+
+      var active = $(selector)
+        .parents('li')
+        .addClass('active')
+
+      if (active.parent('.dropdown-menu').length) {
+        active = active
+          .closest('li.dropdown')
+          .addClass('active')
+      }
+
+      active.trigger('activate.bs.scrollspy')
+    }
+
+    ScrollSpy.prototype.clear = function () {
+      $(this.selector)
+        .parentsUntil(this.options.target, '.active')
+        .removeClass('active')
+    }
+
+
+    // SCROLLSPY PLUGIN DEFINITION
+    // ===========================
+
+    function Plugin(option) {
+      return this.each(function () {
+        var $this   = $(this)
+        var data    = $this.data('bs.scrollspy')
+        var options = typeof option == 'object' && option
+
+        if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
+        if (typeof option == 'string') data[option]()
+      })
+    }
+
+    var old = $.fn.scrollspy
+
+    $.fn.scrollspy             = Plugin
+    $.fn.scrollspy.Constructor = ScrollSpy
+
+
+    // SCROLLSPY NO CONFLICT
+    // =====================
+
+    $.fn.scrollspy.noConflict = function () {
+      $.fn.scrollspy = old
+      return this
+    }
+
+
+    // SCROLLSPY DATA-API
+    // ==================
+
+    $(window).on('load.bs.scrollspy.data-api', function () {
+      $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this)
+        Plugin.call($spy, $spy.data())
+      })
+    })
+
+  }(jQuery);
+</script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0 && isDesktop()) {
+        setTimeout(function () {
+          $('.sidebar-toggle').trigger('click');
+        }, 800);
+      }
+    });
+  </script>
+
+
+
+
+  
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vianull"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+  
+</body>
+</html>
